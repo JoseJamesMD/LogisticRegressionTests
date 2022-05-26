@@ -9,7 +9,12 @@ from sklearn.linear_model import LogisticRegression
 # with n number of random pts and an error term for radius, e
 # circle_data(n,r1,r2,e)
 
-X,y = lf.circle_data(1000,1,2,1)
+n = 1000
+r1 = 1
+r2 = 2
+e = 1
+
+X,y = lf.circle_data(n,r1,r2,e)
 
 ### visualize data
 lf.data_plot(X[:,0],X[:,1],y)
