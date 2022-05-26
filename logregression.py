@@ -5,8 +5,6 @@ from patsy import dmatrices
 from sklearn.linear_model import LogisticRegression
 
 ### create data set
-pts = 1000
-
 # creating two circle distributions with radius r1 and r2
 # with n number of random pts and an error term for radius, e
 # circle_data(n,r1,r2,e)
