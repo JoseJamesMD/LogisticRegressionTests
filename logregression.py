@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu May 26 16:35:39 2022
-
-@author: m211991
-"""
-
 import logfunction as lf
 import numpy as np
 import pandas as pd
@@ -27,17 +20,28 @@ lf.data_plot(X[:,0],X[:,1],y)
 
 # sklearn automatically applies a variable C which is the inverse a regularization term λ. Increasing C minimizes the regularization.
 
-# fit1
+# fit
 fit1 = LogisticRegression(random_state=0,C =1e10).fit(X, y)
-odd_ratio1 = np.exp(fit1.coef_)
-y_fit1 = fit1.predict(X)
 
+# odds ratio
+odd_ratio1 = np.exp(fit1.coef_)
+
+# predict and plot
+y_fit1 = fit1.predict(X)
 lf.data_plot(X[:,0],X[:,1],y_fit1)
 
 #fit2
+
+# non linear parameterization --> add squared parameters X2 = [x1 x2 x1^2 x2^2]
 X2 = np.column_stack([X,np.square(X)])
+
+#fit
 fit2 = LogisticRegression(random_state=0,C =1e10).fit(X2, y)
+
+# odds ratio
 odd_ratio2 = np.exp(fit2.coef_)
+
+# predict and plot
 y_fit2 = fit2.predict(X2)
 lf.data_plot(X2[:,0],X2[:,1],y_fit2)
 
