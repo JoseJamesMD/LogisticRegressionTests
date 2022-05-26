@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu May 26 16:45:29 2022
-
-@author: m211991
-"""
-
 from math import pi, cos, sin
 import numpy as np
 import random
