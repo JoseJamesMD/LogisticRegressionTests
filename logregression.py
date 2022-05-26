@@ -25,6 +25,8 @@ lf.data_plot(X[:,0],X[:,1],y)
 
 ### regression
 
+# sklearn automatically applies a variable C which is the inverse a regularization term λ. Increasing C minimizes the regularization.
+
 # fit1
 fit1 = LogisticRegression(random_state=0,C =1e10).fit(X, y)
 odd_ratio1 = np.exp(fit1.coef_)
